@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat API Flask</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    label { display: block; margin-top: 1em; }
+    input, select { width: 300px; padding: 0.5em; }
+    button { margin-top: 1em; padding: 0.5em 1em; }
+    #result { margin-top: 1em; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Chat con Ollama (API Flask)</h2>
+  <form id="chatForm">
+    <label>Token JWT: <input type="text" id="token" required placeholder="Copia qui il token JWT dal login"></label>
+    <label>Modello:
+      <select id="model">
+        <option value="llama3">llama3</option>
+        <option value="mistral">mistral</option>
+      </select>
+    </label>
+    <label>Prompt: <input type="text" id="prompt" required></label>
+    <button type="submit">Invia</button>
+  </form>
+  <div style="margin-top:1em">
+    <label>Refresh token (opzionale): <input type="text" id="refresh_token" placeholder="Copia qui il refresh token"></label>
+    <button id="refreshBtn" type="button">Ottieni nuovo access token</button>
+  </div>
+  <div id="result"></div>
+  <script>
+    function showResult(msg, ok) {
+      const r = document.getElementById('result');
+      r.textContent = msg;
+      r.style.color = ok ? 'green' : 'red';
+    }
+    document.getElementById('chatForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const token = document.getElementById('token').value;
+      const model = document.getElementById('model').value;
+      const prompt = document.getElementById('prompt').value;
+      let msg = '';
+      let ok = false;
+      try {
+        const res = await fetch('http://10.100.60.9:5000/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+          },
+          body: JSON.stringify({ model, prompt })
+        });
+        const data = await res.json();
+        if (res.status === 200 && data.response) {
+          msg = '✅ ' + data.response;
+          ok = true;
+        } else {
+          msg = '❌ ' + (data.msg || JSON.stringify(data));
+        }
+        msg = res.status + ': ' + msg;
+      } catch (err) {
+        msg = 'Errore di rete: ' + err;
+      }
+      showResult(msg, ok);
+    };
+    document.getElementById('refreshBtn').onclick = async function() {
+      const refresh = document.getElementById('refresh_token').value;
+      if (!refresh) {
+        showResult('Inserisci un refresh token valido', false);
+        return;
+      }
+      let msg = '';
+      let ok = false;
+      try {
+        const res = await fetch('http://10.100.60.9:5000/auth/refresh', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + refresh
+          }
+        });
+        const data = await res.json();
+        if (res.status === 200 && data.access_token) {
+          document.getElementById('token').value = data.access_token;
+          msg = '✅ Nuovo access token ottenuto e inserito.';
+          ok = true;
+        } else {
+          msg = '❌ ' + (data.msg || JSON.stringify(data));
+        }
+        msg = res.status + ': ' + msg;
+      } catch (err) {
+        msg = 'Errore di rete: ' + err;
+      }
+      showResult(msg, ok);
+    };
+  </script>
+</body>
+</html>

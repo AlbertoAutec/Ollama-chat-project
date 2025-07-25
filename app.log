@@ -1,0 +1,43 @@
+2025-07-25 11:49:15,473 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-25 11:49:15,473 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-25 11:49:15,473 INFO werkzeug  * Restarting with stat
+2025-07-25 11:49:16,509 WARNING werkzeug  * Debugger is active!
+2025-07-25 11:49:16,509 INFO werkzeug  * Debugger PIN: 122-802-929
+2025-07-25 11:50:43,811 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:50:43] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:50:43,811 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:50:43] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-25 11:50:53,138 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:50:53] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:50:53,138 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:50:53] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-25 11:51:15,154 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:15] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:51:15,163 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:15] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-25 11:51:31,897 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:31] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:51:31,897 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:31] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-25 11:51:40,545 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:40] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:51:40,554 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:40] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-25 11:51:43,207 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:43] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:51:43,207 INFO flask-limiter ratelimit 5 per 1 minute (10.100.60.9) exceeded at endpoint: auth.register
+2025-07-25 11:51:43,207 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:43] "[31m[1mPOST /auth/register HTTP/1.1[0m" 429 -
+2025-07-25 11:51:54,624 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:54] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:51:54,632 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:54] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-25 11:51:59,058 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:59] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:51:59,058 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:51:59] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-25 11:52:11,818 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:52:11] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:52:11,822 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:52:11] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-25 11:52:19,242 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:52:19] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:52:19,242 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:52:19] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-25 11:52:22,829 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:52:22] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-25 11:52:23,104 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:52:23] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-07-25 11:52:46,875 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:52:46] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-25 11:52:46,973 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:52:46] "POST /auth/login HTTP/1.1" 200 -
+2025-07-25 11:53:26,950 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:53:26] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-25 11:53:42,890 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:53:42] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-25 11:53:54,609 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:53:54] "POST /chat HTTP/1.1" 200 -
+2025-07-25 11:54:13,380 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:54:13] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-25 11:54:15,115 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:54:15] "POST /chat HTTP/1.1" 200 -
+2025-07-25 11:54:20,050 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:54:20] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-25 11:54:30,311 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:54:30] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-25 11:54:33,563 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:54:33] "POST /chat HTTP/1.1" 200 -
+2025-07-25 11:54:50,757 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:54:50] "POST /chat HTTP/1.1" 200 -
+2025-07-25 11:55:17,281 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 11:55:17] "POST /chat HTTP/1.1" 200 -

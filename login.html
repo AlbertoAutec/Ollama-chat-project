@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Login API Chat</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    label { display: block; margin-top: 1em; }
+    input { width: 300px; padding: 0.5em; }
+    button { margin-top: 1em; padding: 0.5em 1em; }
+    #result { margin-top: 1em; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Login utente (API Flask)</h2>
+  <form id="loginForm">
+    <label>Username: <input type="text" id="username" required></label>
+    <label>Password: <input type="password" id="password" required></label>
+    <button type="submit">Login</button>
+  </form>
+  <div id="result"></div>
+  <div id="tokens" style="margin-top:1em;"></div>
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text);
+      alert('Copiato negli appunti!');
+    }
+    document.getElementById('loginForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      let msg = '';
+      let color = 'red';
+      let tokensHtml = '';
+      try {
+        const res = await fetch('http://10.100.60.9:5000/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+        if (res.status === 200 && data.access_token) {
+          msg = '✅ Login riuscito';
+          color = 'green';
+          tokensHtml = `<div>Access token:<br><input type='text' id='access' value='${data.access_token}' style='width:90%' readonly>
+            <button onclick="copyToClipboard(document.getElementById('access').value)">Copia</button></div>`;
+          if (data.refresh_token) {
+            tokensHtml += `<div style='margin-top:0.5em'>Refresh token:<br><input type='text' id='refresh' value='${data.refresh_token}' style='width:90%' readonly>
+            <button onclick="copyToClipboard(document.getElementById('refresh').value)">Copia</button></div>`;
+          }
+        } else {
+          msg = '❌ ' + (data.msg || JSON.stringify(data));
+        }
+        msg = res.status + ': ' + msg;
+      } catch (err) {
+        msg = 'Errore di rete: ' + err;
+      }
+      document.getElementById('result').textContent = msg;
+      document.getElementById('result').style.color = color;
+      document.getElementById('tokens').innerHTML = tokensHtml;
+    };
+  </script>
+</body>
+</html>

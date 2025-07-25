@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrazione API Chat</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    label { display: block; margin-top: 1em; }
+    input { width: 300px; padding: 0.5em; }
+    button { margin-top: 1em; padding: 0.5em 1em; }
+    #result { margin-top: 1em; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Registrazione utente (API Flask)</h2>
+  <form id="regForm">
+    <label>Username: <input type="text" id="username" required></label>
+    <label>Email: <input type="email" id="email" required></label>
+    <label>Password: <input type="password" id="password" required></label>
+    <button type="submit">Registra</button>
+  </form>
+  <div id="result"></div>
+  <script>
+    document.getElementById('regForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      let msg = '';
+      let color = 'red';
+      try {
+        const res = await fetch('http://10.100.60.9:5000/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, email, password })
+        });
+        const data = await res.json();
+        if (res.status === 201) {
+          msg = '✅ ' + (data.msg || 'Registrazione avvenuta');
+          color = 'green';
+          document.getElementById('regForm').reset();
+        } else {
+          msg = '❌ ' + (data.msg || JSON.stringify(data));
+        }
+        msg = res.status + ': ' + msg;
+      } catch (err) {
+        msg = 'Errore di rete: ' + err;
+      }
+      const result = document.getElementById('result');
+      result.textContent = msg;
+      result.style.color = color;
+    };
+  </script>
+</body>
+</html>
