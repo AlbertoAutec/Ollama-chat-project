@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Storico Chat - Autecsafety</title>
+  <style>
+    :root {
+      --main-bg: #f4f6fb;
+      --card-bg: #fff;
+      --text-main: #2a3a4a;
+      --input-bg: #ffffff;
+      --input-border: #394042;
+      --button-bg: #FFEB3B;
+      --button-bg-hover: #807b58;
+      --button-bg-active: #ffd600;
+      --button-text: #222;
+    }
+    body.dark {
+      --main-bg: #23272e;
+      --card-bg: #fff;
+      --text-main: #23272e;
+      --input-bg: #fff;
+      --input-border: #888;
+      --button-bg: #FFD600;
+      --button-bg-hover: #bfae3b;
+      --button-bg-active: #bfae00;
+      --button-text: #23272e;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--main-bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      z-index: 10;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.3em;
+      cursor: pointer;
+      box-shadow: 0 1px 4px #0002;
+      transition: background 0.2s, color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .theme-toggle:hover {
+      background: var(--button-bg-hover);
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #0001;
+      padding: 2em 2.5em 2em 2.5em;
+      min-width: 340px;
+      max-width: 600px;
+      color: var(--text-main);
+      transition: background 0.2s, color 0.2s;
+    }
+    h2 { text-align: center; color: var(--text-main); }
+    #historyList {
+      margin-top: 1.5em;
+      padding: 0;
+      list-style: none;
+      max-height: 350px;
+      overflow-y: auto;
+      border-radius: 8px;
+      background: #f9f9f9;
+      box-shadow: 0 1px 4px #0001;
+    }
+    #historyList li {
+      padding: 1em 1.2em;
+      border-bottom: 1px solid #eee;
+      color: #222;
+      background: #fff;
+    }
+    #historyList li:last-child {
+      border-bottom: none;
+    }
+    .loader {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      border: 3px solid #FFEB3B;
+      border-radius: 50%;
+      border-top: 3px solid #fff;
+      animation: spin 1s linear infinite;
+      margin-left: 0.5em;
+      vertical-align: middle;
+      background: transparent;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" title="Cambia tema">🌙</button>
+  <div class="card">
+    <div style="text-align:center; margin-bottom:1em;">
+      <img src="static/img/logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
+    </div>
+    <h2>Storico delle Chat</h2>
+    <button id="loadHistoryBtn" style="margin-bottom:1em; width:100%; background:var(--button-bg); color:var(--button-text); border:none; border-radius:6px; font-size:1.1em; cursor:pointer;">Carica storico</button>
+    <ul id="historyList"></ul>
+    <div id="historyLoader" style="display:none; text-align:center; margin-top:1em;"><span class="loader"></span></div>
+    <div id="historyError" style="display:none; color:#b71c1c; margin-top:1em; text-align:center;"></div>
+  </div>
+  <script>
+    // Tema chiaro/scuro
+    const themeToggle = document.getElementById('themeToggle');
+    function setTheme(dark) {
+      document.body.classList.toggle('dark', dark);
+      themeToggle.textContent = dark ? '☀️' : '🌙';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+    themeToggle.onclick = () => setTheme(!document.body.classList.contains('dark'));
+    if (localStorage.getItem('theme') === 'dark') setTheme(true);
+
+    // Caricamento storico
+    const loadBtn = document.getElementById('loadHistoryBtn');
+    const historyList = document.getElementById('historyList');
+    const loader = document.getElementById('historyLoader');
+    const errorDiv = document.getElementById('historyError');
+    loadBtn.onclick = async function() {
+      historyList.innerHTML = '';
+      errorDiv.style.display = 'none';
+      loader.style.display = 'block';
+      try {
+        const token = localStorage.getItem('jwt');
+        const res = await fetch('http://10.100.60.9:5000/history', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': token ? 'Bearer ' + token : ''
+          }
+        });
+        const data = await res.json();
+        loader.style.display = 'none';
+        if (res.status === 200 && Array.isArray(data)) {
+          if (data.length === 0) {
+            historyList.innerHTML = '<li>Nessuna chat trovata.</li>';
+          } else {
+            data.forEach(item => {
+              const li = document.createElement('li');
+              li.textContent = `[${item.timestamp || ''}] ${item.model || ''}: ${item.prompt} → ${item.response}`;
+              historyList.appendChild(li);
+            });
+          }
+        } else {
+          errorDiv.textContent = 'Errore nel caricamento dello storico.';
+          errorDiv.style.display = 'block';
+        }
+      } catch (err) {
+        loader.style.display = 'none';
+        errorDiv.textContent = 'Errore di rete: ' + err;
+        errorDiv.style.display = 'block';
+      }
+    };
+  </script>
+</body>
+</html>

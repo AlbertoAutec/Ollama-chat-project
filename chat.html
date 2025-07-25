@@ -4,42 +4,217 @@
   <meta charset="UTF-8">
   <title>Chat API Flask</title>
   <style>
-    body { font-family: sans-serif; margin: 2em; }
-    label { display: block; margin-top: 1em; }
-    input, select { width: 300px; padding: 0.5em; }
-    button { margin-top: 1em; padding: 0.5em 1em; }
-    #result { margin-top: 1em; font-weight: bold; }
+    :root {
+      --main-bg: #f4f6fb;
+      --card-bg: #fff;
+      --text-main: #2a3a4a;
+      --input-bg: #ffffff;
+      --input-border: #394042;
+      --button-bg: #FFEB3B;
+      --button-bg-hover: #807b58;
+      --button-bg-active: #ffd600;
+      --button-text: #222;
+    }
+body.dark {
+  --main-bg: #23272e;
+  --card-bg: #fff; /* Card resta chiara anche in dark mode */
+  --text-main: #23272e; /* Testo scuro nella card */
+  --input-bg: #fff;
+  --input-border: #888;
+  --button-bg: #FFD600;
+  --button-bg-hover: #bfae3b;
+  --button-bg-active: #bfae00;
+  --button-text: #23272e;
+}
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--main-bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #0001;
+      padding: 2em 2.5em 2em 2.5em;
+      min-width: 340px;
+      max-width: 440px;
+      color: var(--text-main);
+      transition: background 0.2s, color 0.2s;
+    }
+    h2 { text-align: center; color: var(--text-main); }
+    label { display: block; margin-top: 1.2em; color: var(--text-main); }
+    input, select {
+      width: 100%;
+      padding: 0.7em;
+      border: 1px solid var(--input-border);
+      border-radius: 6px;
+      margin-top: 0.3em;
+      font-size: 1em;
+      background: var(--input-bg);
+      color: var(--text-main);
+      transition: border 0.2s, background 0.2s, color 0.2s;
+    }
+    input:focus, select:focus {
+      border: 1.5px solid #FFEB3B;
+      outline: none;
+      background: #fff;
+    }
+    button {
+      margin-top: 1.5em;
+      padding: 0.7em 1.5em;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.08s;
+      width: 100%;
+    }
+    button:hover {
+      background: var(--button-bg-hover);
+    }
+    button:active {
+      background: var(--button-bg-active);
+      transform: translateY(2px) scale(0.98);
+    }
+    #result {
+      margin-top: 1.5em;
+      font-weight: 500;
+      padding: 0.9em 1em;
+      border-radius: 6px;
+      display: none;
+      font-size: 1.05em;
+    }
+    #result.success {
+      background: #e8f5e9;
+      color: #256029;
+      border: 1px solid #b2dfdb;
+      display: block;
+    }
+    #result.error {
+      background: #ffebee;
+      color: #b71c1c;
+      border: 1px solid #ffcdd2;
+      display: block;
+    }
+    .loader {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      border: 3px solid #FFEB3B;
+      border-radius: 50%;
+      border-top: 3px solid #fff;
+      animation: spin 1s linear infinite;
+      margin-left: 0.5em;
+      vertical-align: middle;
+      background: transparent;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .refresh-box {
+      margin-top: 1.2em;
+      background: #f9fbfd;
+      border-radius: 8px;
+      padding: 1em 1em 0.5em 1em;
+      font-size: 0.98em;
+      border: 1px solid #e3e7ed;
+      box-shadow: 0 1px 4px #0001;
+    }
+    .refresh-box button {
+      width: auto;
+      margin-top: 0.3em;
+      margin-left: 0.5em;
+      padding: 0.3em 0.8em;
+      font-size: 0.95em;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      z-index: 10;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.3em;
+      cursor: pointer;
+      box-shadow: 0 1px 4px #0002;
+      transition: background 0.2s, color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .theme-toggle:hover {
+      background: var(--button-bg-hover);
+    }
   </style>
 </head>
 <body>
-  <h2>Chat con Ollama (API Flask)</h2>
-  <form id="chatForm">
-    <label>Token JWT: <input type="text" id="token" required placeholder="Copia qui il token JWT dal login"></label>
-    <label>Modello:
-      <select id="model">
-        <option value="llama3">llama3</option>
-        <option value="mistral">mistral</option>
-      </select>
-    </label>
-    <label>Prompt: <input type="text" id="prompt" required></label>
-    <button type="submit">Invia</button>
-  </form>
-  <div style="margin-top:1em">
-    <label>Refresh token (opzionale): <input type="text" id="refresh_token" placeholder="Copia qui il refresh token"></label>
-    <button id="refreshBtn" type="button">Ottieni nuovo access token</button>
+  <button class="theme-toggle" id="themeToggle" title="Cambia tema">🌙</button>
+  <div class="card">
+    <div style="text-align:center; margin-bottom:1em;">
+      <img src="c:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\static\img\logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
+    </div>
+    <h2>Benvenuto nella chat API ufficiale di Autecsafety!</h2>
+    <form id="chatForm" autocomplete="off">
+      <label>Token JWT:<input type="text" id="token" required placeholder="Copia qui il token JWT dal login"></label>
+      <label>Modello:
+        <select id="model">
+          <option value="llama3">llama3</option>
+          <option value="mistral">mistral</option>
+        </select>
+      </label>
+      <label>Prompt:<input type="text" id="prompt" required></label>
+      <button type="submit" id="chatBtn">Invia</button>
+    </form>
+    <div class="refresh-box">
+      <label>Refresh token (opzionale):<input type="text" id="refresh_token" placeholder="Copia qui il refresh token"></label>
+      <button id="refreshBtn" type="button">Ottieni nuovo access token</button>
+    </div>
+    <div id="result"></div>
+    <a href="history.html" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
+      <button type="button" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Vai allo storico chat</button>
+    </a>
   </div>
-  <div id="result"></div>
   <script>
+    // Tema chiaro/scuro
+    const themeToggle = document.getElementById('themeToggle');
+    function setTheme(dark) {
+      document.body.classList.toggle('dark', dark);
+      themeToggle.textContent = dark ? '☀️' : '🌙';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+    themeToggle.onclick = () => setTheme(!document.body.classList.contains('dark'));
+    // Applica preferenza salvata
+    if (localStorage.getItem('theme') === 'dark') setTheme(true);
     function showResult(msg, ok) {
       const r = document.getElementById('result');
       r.textContent = msg;
-      r.style.color = ok ? 'green' : 'red';
+      r.className = ok ? 'success' : 'error';
+      r.style.display = 'block';
     }
-    document.getElementById('chatForm').onsubmit = async function(e) {
+    const chatForm = document.getElementById('chatForm');
+    const chatBtn = document.getElementById('chatBtn');
+    chatForm.onsubmit = async function(e) {
       e.preventDefault();
       const token = document.getElementById('token').value;
       const model = document.getElementById('model').value;
       const prompt = document.getElementById('prompt').value;
+      const result = document.getElementById('result');
+      result.className = '';
+      result.style.display = 'none';
+      chatBtn.disabled = true;
+      chatBtn.innerHTML = 'Attendi <span class="loader"></span>';
       let msg = '';
       let ok = false;
       try {
@@ -63,6 +238,8 @@
         msg = 'Errore di rete: ' + err;
       }
       showResult(msg, ok);
+      chatBtn.disabled = false;
+      chatBtn.innerHTML = 'Invia';
     };
     document.getElementById('refreshBtn').onclick = async function() {
       const refresh = document.getElementById('refresh_token').value;
@@ -70,8 +247,14 @@
         showResult('Inserisci un refresh token valido', false);
         return;
       }
+      const result = document.getElementById('result');
+      result.className = '';
+      result.style.display = 'none';
       let msg = '';
       let ok = false;
+      const btn = document.getElementById('refreshBtn');
+      btn.disabled = true;
+      btn.innerHTML = 'Attendi <span class="loader"></span>';
       try {
         const res = await fetch('http://10.100.60.9:5000/auth/refresh', {
           method: 'POST',
@@ -93,6 +276,8 @@
         msg = 'Errore di rete: ' + err;
       }
       showResult(msg, ok);
+      btn.disabled = false;
+      btn.innerHTML = 'Ottieni nuovo access token';
     };
   </script>
 </body>
