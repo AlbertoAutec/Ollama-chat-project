@@ -46,12 +46,26 @@
 - [ ] Avviare container con variabili ambiente
 - [ ] Verificare funzionamento API in container
 
+
 ## 8. Migliorie e sicurezza (consigliato)
 - [x] Aggiungere logging avanzato (file, livelli)
 - [x] Rate limiting sugli endpoint
 - [x] Migliorare validazione input (regex, email, password forti)
 - [x] Gestione refresh token JWT
 - [x] Documentazione OpenAPI/Swagger
+
+## 9. Frontend e UX (completato)
+- [x] Creazione pagine HTML: register, login, chat, history
+- [x] Tema chiaro/scuro con toggle
+- [x] Card centrale chiara anche in dark mode
+- [x] Logo aziendale e branding
+- [x] Pulsanti con effetti hover e feedback
+- [x] Collegamenti rapidi tra pagine (login, registrazione, storico)
+- [x] Gestione JWT in localStorage dopo login/registrazione
+- [x] Visualizzazione e copia token JWT dopo registrazione/login
+- [x] Accesso protetto a chat e storico tramite JWT
+- [x] Visualizzazione storico chat con modello, prompt e risposta
+- [x] Messaggi di errore/successo ben visibili
 
 ---
 

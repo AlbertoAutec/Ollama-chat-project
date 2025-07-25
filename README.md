@@ -97,12 +97,38 @@ Risposta:
 ]
 ```
 
+
+## Frontend (HTML didattico incluso)
+
+Sono incluse pagine HTML moderne e responsive per testare l'API da browser:
+
+- **register.html**: Registrazione utente, mostra token JWT, pulsante copia token, redirect manuale alla chat.
+- **login.html**: Login utente, salva JWT in localStorage, mostra token, pulsante per accedere alla chat.
+- **chat.html**: Interfaccia chat con invio prompt e visualizzazione risposta AI.
+- **history.html**: Visualizza lo storico delle chat dell'utente autenticato, con richiesta JWT automatica.
+
+### Caratteristiche UI/UX
+- Tema chiaro/scuro con toggle (🌙/☀️)
+- Card centrale sempre chiara per facilitare la scrittura anche in dark mode
+- Logo aziendale in alto
+- Pulsanti con effetti hover e feedback
+- Collegamenti rapidi tra pagine (login, registrazione, storico)
+- Messaggi di errore/successo ben visibili
+- JWT gestito in localStorage dopo login/registrazione
+
+### Flusso utente
+1. L'utente si registra (register.html), copia il token JWT e accede alla chat.
+2. Dopo login (login.html), il token viene salvato e l'utente può accedere direttamente alla chat.
+3. La chat (chat.html) e lo storico (history.html) usano il JWT per autenticare le richieste.
+
 ## Note tecniche
 - **Password**: hashate con `werkzeug.security`.
-- **JWT**: validità 1 ora.
+- **JWT**: validità 1 ora, gestito lato frontend in localStorage.
 - **Ollama**: endpoint locale `http://localhost:11434/api/chat`.
 - **ORM**: SQLAlchemy, tabelle `users` e `messages`.
-- **Logging e validazioni**: basilari, facilmente estendibili.
+- **Logging avanzato** e validazioni input.
+- **Rate limiting** e CORS abilitati.
+- **OpenAPI/Swagger** documentazione interattiva integrata.
 
 ## Avvio in Docker (opzionale)
 ```sh
