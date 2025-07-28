@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Registrazione API Chat di Autecsafety</title>
+  <title>Login API Chat di Autecsafety</title>
   <style>
     :root {
       --main-bg: #f4f6fb;
@@ -29,14 +29,12 @@ body.dark {
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       background: var(--main-bg);
-      position: relative; /* Added to position the date display */
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: background 0.2s;
     }
-  /* Removed date display styles */
     .card {
       background: var(--card-bg);
       border-radius: 12px;
@@ -120,6 +118,23 @@ body.dark {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    #tokens {
+      margin-top: 1.2em;
+      background: #f9fbfd;
+      border-radius: 8px;
+      padding: 1em 1em 0.5em 1em;
+      font-size: 0.98em;
+      word-break: break-all;
+      border: 1px solid #e3e7ed;
+      box-shadow: 0 1px 4px #0001;
+    }
+    #tokens button {
+      width: auto;
+      margin-top: 0.3em;
+      margin-left: 0.5em;
+      padding: 0.3em 0.8em;
+      font-size: 0.95em;
+    }
     .theme-toggle {
       position: absolute;
       top: 18px;
@@ -149,19 +164,22 @@ body.dark {
   <button class="theme-toggle" id="themeToggle" title="Cambia tema">🌙</button>
   <div class="card">
     <div style="text-align:center; margin-bottom:1em;">
-      <img src="c:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\static\img\logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
+      <img src="/static/img/logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
     </div>
-    <h2>La tua prima registrazione alla chat API di Autecsafety</h2>
-    <form id="regForm" autocomplete="off">
-      <label>Inserisci Username:<input type="text" id="username" required autocomplete="username"></label>
-      <label>Inserisci Email:<input type="email" id="email" required autocomplete="email"></label>
-      <label>Inserisci Password:<input type="password" id="password" required autocomplete="new-password"></label>
-      <button type="submit" id="regBtn">Registrati qui</button>
+    <h2>Login utente di Autecsafety</h2>
+    <form id="loginForm" autocomplete="off">
+      <label>Il tuo Username:<input type="text" id="username" required autocomplete="username"></label>
+      <label>La tua Password:<input type="password" id="password" required autocomplete="current-password"></label>
+      <button type="submit" id="loginBtn">Entra</button>
     </form>
     <div id="result"></div>
-    <a href="history.html" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
+    <a href="/register" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
+      <button type="button" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Non hai un account? Registrati</button>
+    </a>
+    <a href="/history" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
       <button type="button" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Vai allo storico chat</button>
     </a>
+    <div id="tokens"></div>
   </div>
   <script>
     // Tema chiaro/scuro
@@ -171,55 +189,48 @@ body.dark {
       themeToggle.textContent = dark ? '☀️' : '🌙';
       localStorage.setItem('theme', dark ? 'dark' : 'light');
     }
-    // Removed date display functionality
     themeToggle.onclick = () => setTheme(!document.body.classList.contains('dark'));
     // Applica preferenza salvata
     if (localStorage.getItem('theme') === 'dark') setTheme(true);
-    const regForm = document.getElementById('regForm');
-    const regBtn = document.getElementById('regBtn');
-    regForm.onsubmit = async function(e) {
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text);
+      alert('Copiato negli appunti!');
+    }
+    const loginForm = document.getElementById('loginForm');
+    const loginBtn = document.getElementById('loginBtn');
+    loginForm.onsubmit = async function(e) {
       e.preventDefault();
       const username = document.getElementById('username').value;
-      const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const result = document.getElementById('result');
+      const tokensDiv = document.getElementById('tokens');
       result.className = '';
       result.style.display = 'none';
-      regBtn.disabled = true;
-      regBtn.innerHTML = 'Attendi <span class="loader"></span>';
+      tokensDiv.innerHTML = '';
+      loginBtn.disabled = true;
+      loginBtn.innerHTML = 'Attendi <span class="loader"></span>';
       let msg = '';
       let ok = false;
+      let tokensHtml = '';
       try {
-        const res = await fetch('http://10.100.60.9:5000/auth/register', {
+        const res = await fetch('http://10.100.60.9:5000/auth/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, email, password })
+          body: JSON.stringify({ username, password })
         });
         const data = await res.json();
-        if (res.status === 201) {
-          msg = '✅ ' + (data.msg || 'Registrazione avvenuta');
+        if (res.status === 200 && data.access_token) {
+          msg = '✅ Login riuscito';
           ok = true;
-          regForm.reset();
-          // Mostra il token JWT se presente
-          if (data.token) {
-            result.innerHTML = msg + '<br><br><b>Il tuo token JWT:</b><br>' +
-              '<textarea id="jwtTokenBox" readonly style="width:100%;min-height:3em;font-size:0.98em;margin-top:0.5em;">' + data.token + '</textarea>' +
-              '<button id="copyJwtBtn" style="margin-top:0.7em;background:#ffd600;color:#222;border:none;border-radius:6px;padding:0.5em 1.2em;cursor:pointer;">Copia token</button>' +
-              '<button id="gotoChatBtn" style="margin-top:0.7em;margin-left:1em;background:#e0e0e0;color:#222;border:none;border-radius:6px;padding:0.5em 1.2em;cursor:pointer;">Vai alla chat</button>';
-            setTimeout(() => {
-              document.getElementById('copyJwtBtn').onclick = function() {
-                const jwtBox = document.getElementById('jwtTokenBox');
-                jwtBox.select();
-                document.execCommand('copy');
-                this.textContent = 'Copiato!';
-                setTimeout(() => { this.textContent = 'Copia token'; }, 1200);
-              };
-              document.getElementById('gotoChatBtn').onclick = function() {
-                window.location.href = 'chat.html';
-              };
-            }, 100);
-            return;
+          // Salva il token JWT in localStorage
+          localStorage.setItem('jwt', data.access_token);
+          tokensHtml = `<div>Access token:<br><input type='text' id='access' value='${data.access_token}' style='width:90%' readonly>
+            <button onclick=\"copyToClipboard(document.getElementById('access').value)\">Copia</button></div>`;
+          if (data.refresh_token) {
+            tokensHtml += `<div style='margin-top:0.5em'>Refresh token:<br><input type='text' id='refresh' value='${data.refresh_token}' style='width:90%' readonly>
+            <button onclick=\"copyToClipboard(document.getElementById('refresh').value)\">Copia</button></div>`;
           }
+          tokensHtml += `<button id='gotoChatBtn' style='margin-top:1em;background:#e0e0e0;color:#222;border:none;border-radius:6px;padding:0.5em 1.2em;cursor:pointer;'>Vai alla chat</button>`;
         } else {
           msg = '❌ ' + (data.msg || JSON.stringify(data));
         }
@@ -230,8 +241,15 @@ body.dark {
       result.textContent = msg;
       result.className = ok ? 'success' : 'error';
       result.style.display = 'block';
-      regBtn.disabled = false;
-      regBtn.innerHTML = 'Registra';
+      tokensDiv.innerHTML = tokensHtml;
+      if (ok) {
+        setTimeout(() => {
+          const btn = document.getElementById('gotoChatBtn');
+          if (btn) btn.onclick = function() { window.location.href = '/chat'; };
+        }, 100);
+      }
+      loginBtn.disabled = false;
+      loginBtn.innerHTML = 'Login';
     };
   </script>
 </body>

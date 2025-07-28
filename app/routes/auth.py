@@ -6,6 +6,14 @@ from app.models.user import User
 import jwt, datetime, os, re
 from werkzeug.security import check_password_hash
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt_identity
+
+# ...definizione blueprint e altre route...
+
+# Inserisci la route dopo la definizione di auth_bp
+
+
+# ...altre route...
+
 from app import limiter
 
 auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
@@ -113,6 +121,7 @@ def login():
     return jsonify({'access_token': access_token, 'refresh_token': refresh_token}), 200
 
 
+
 # Endpoint per refresh token
 @auth_bp.route('/refresh', methods=['POST'])
 @jwt_required(refresh=True)
@@ -137,3 +146,20 @@ def refresh():
     user_id = get_jwt_identity()
     access_token = create_access_token(identity=user_id, expires_delta=datetime.timedelta(hours=1))
     return jsonify({'access_token': access_token}), 200
+
+
+# ...esistenti...
+
+
+
+
+# Route per elenco utenti registrati (protetta)
+@auth_bp.route('/users', methods=['GET'])
+@jwt_required()
+def list_users():
+    """
+    Restituisce l'elenco degli username registrati (protetto, solo autenticati).
+    """
+    users = User.query.with_entities(User.username).all()
+    usernames = [u[0] for u in users]
+    return jsonify({'users': usernames}), 200

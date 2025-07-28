@@ -146,3 +146,680 @@
 2025-07-25 13:38:58,690 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 13:38:58] "POST /chat HTTP/1.1" 200 -
 2025-07-25 13:39:25,146 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 13:39:25] "OPTIONS /chat HTTP/1.1" 200 -
 2025-07-25 13:40:18,325 INFO werkzeug 10.100.60.9 - - [25/Jul/2025 13:40:18] "POST /chat HTTP/1.1" 200 -
+2025-07-28 08:24:16,579 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 08:24:16,579 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 08:24:16,579 INFO werkzeug  * Restarting with stat
+2025-07-28 08:24:17,672 WARNING werkzeug  * Debugger is active!
+2025-07-28 08:24:17,687 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 08:24:56,164 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:24:56] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-28 08:24:56,479 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:24:56] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-07-28 08:25:11,095 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:25:11] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 08:25:11,187 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:25:11] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 08:25:53,036 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:25:53] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-28 08:26:55,915 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:26:55] "POST /chat HTTP/1.1" 200 -
+2025-07-28 08:27:51,470 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:27:51] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-28 08:28:54,928 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:28:54] "POST /chat HTTP/1.1" 200 -
+2025-07-28 08:29:10,779 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:29:10] "OPTIONS /history HTTP/1.1" 200 -
+2025-07-28 08:29:10,779 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:29:10] "GET /history HTTP/1.1" 200 -
+2025-07-28 08:29:29,583 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:29:29] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-28 08:29:43,621 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:29:43] "POST /chat HTTP/1.1" 200 -
+2025-07-28 08:47:03,915 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 08:47:03,915 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 08:47:03,915 INFO werkzeug  * Restarting with stat
+2025-07-28 08:47:05,042 WARNING werkzeug  * Debugger is active!
+2025-07-28 08:47:05,045 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 08:47:39,988 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:47:39] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 08:47:40,244 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:47:40] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 08:50:13,866 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 08:50:13,866 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 08:50:13,876 INFO werkzeug  * Restarting with stat
+2025-07-28 08:50:14,930 WARNING werkzeug  * Debugger is active!
+2025-07-28 08:50:14,930 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 08:58:37,348 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 08:58:37,348 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 08:58:37,348 INFO werkzeug  * Restarting with stat
+2025-07-28 08:58:38,480 WARNING werkzeug  * Debugger is active!
+2025-07-28 08:58:38,480 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 08:59:04,885 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:59:04] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-28 08:59:05,176 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:59:05] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-07-28 08:59:16,589 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:59:16] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 08:59:16,673 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:59:16] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2025-07-28 08:59:34,574 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:59:34] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 08:59:34,659 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:59:34] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2025-07-28 08:59:47,820 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:59:47] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 08:59:47,920 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 08:59:47] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2025-07-28 09:00:11,127 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:00:11] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:00:11,225 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:00:11] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:00:54,931 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:00:54] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:00:55,031 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:00:55] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:01:13,956 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:01:13] "OPTIONS /auth/users HTTP/1.1" 200 -
+2025-07-28 09:01:13,956 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:01:13] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 09:01:21,858 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:01:21] "OPTIONS /auth/users HTTP/1.1" 200 -
+2025-07-28 09:01:21,866 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:01:21] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 09:07:44,402 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 09:07:44,402 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 09:07:44,402 INFO werkzeug  * Restarting with stat
+2025-07-28 09:07:45,590 WARNING werkzeug  * Debugger is active!
+2025-07-28 09:07:45,595 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 09:07:57,762 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:07:57] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:07:58,029 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:07:58] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:08:14,242 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:08:14] "OPTIONS /auth/users HTTP/1.1" 200 -
+2025-07-28 09:08:14,250 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:08:14] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 09:12:18,765 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 09:12:18,765 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 09:12:18,765 INFO werkzeug  * Restarting with stat
+2025-07-28 09:12:19,875 WARNING werkzeug  * Debugger is active!
+2025-07-28 09:12:19,875 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 09:13:10,279 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:13:10] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-28 09:13:10,546 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:13:10] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-07-28 09:13:52,268 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:13:52] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:13:52,354 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:13:52] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:15:03,757 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 09:15:03,758 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 09:15:03,759 INFO werkzeug  * Restarting with stat
+2025-07-28 09:15:04,839 WARNING werkzeug  * Debugger is active!
+2025-07-28 09:15:04,842 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 09:15:34,933 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:15:34] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:15:35,172 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:15:35] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:16:01,548 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:16:01] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:16:01,635 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:16:01] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:22:37,561 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 09:22:37,561 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 09:22:37,561 INFO werkzeug  * Restarting with stat
+2025-07-28 09:22:38,676 WARNING werkzeug  * Debugger is active!
+2025-07-28 09:22:38,676 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 09:23:16,101 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:23:16] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:23:16,318 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:23:16] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:23:24,896 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:23:24] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:23:24,979 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:23:24] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:23:54,159 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:23:54] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:23:54,257 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:23:54] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:24:44,727 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:24:44] "OPTIONS /chat HTTP/1.1" 200 -
+2025-07-28 09:24:51,015 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:24:51] "OPTIONS /auth/users HTTP/1.1" 200 -
+2025-07-28 09:24:51,028 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:24:51] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 09:25:05,096 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:25:05] "POST /chat HTTP/1.1" 200 -
+2025-07-28 09:27:40,857 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 09:27:40,857 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 09:27:40,861 INFO werkzeug  * Restarting with stat
+2025-07-28 09:27:41,909 WARNING werkzeug  * Debugger is active!
+2025-07-28 09:27:41,924 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 09:27:59,088 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:27:59] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:27:59,339 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:27:59] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:28:09,756 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:28:09] "OPTIONS /auth/users HTTP/1.1" 200 -
+2025-07-28 09:28:09,756 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:28:09] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 09:32:01,361 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 09:32:01,361 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 09:32:01,364 INFO werkzeug  * Restarting with stat
+2025-07-28 09:32:02,526 WARNING werkzeug  * Debugger is active!
+2025-07-28 09:32:02,526 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 09:32:50,343 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:32:50] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-28 09:32:50,584 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:32:50] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-07-28 09:33:12,067 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:33:12] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:33:12,166 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:33:12] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:33:21,358 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:33:21] "OPTIONS /auth/users HTTP/1.1" 200 -
+2025-07-28 09:33:21,372 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:33:21] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 09:38:03,293 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 09:38:03] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+2025-07-28 09:38:03,460 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 09:38:03] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-28 09:38:03,511 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 09:38:03] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-28 09:38:03,879 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 09:38:03] "GET /register?__debugger__=yes&cmd=resource&f=console.png&s=KEV3ERE1eUtBF2nyzseS HTTP/1.1" 200 -
+2025-07-28 09:38:04,137 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 09:38:04] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-28 09:46:05,292 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 09:46:05,292 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 09:46:05,292 INFO werkzeug  * Restarting with stat
+2025-07-28 09:46:06,485 WARNING werkzeug  * Debugger is active!
+2025-07-28 09:46:06,490 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 09:46:11,717 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:46:11] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+2025-07-28 09:46:11,970 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:46:11] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-28 09:46:11,989 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:46:11] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-28 09:46:12,072 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:46:12] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-28 09:48:31,746 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 09:48:31,746 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 09:48:31,746 INFO werkzeug  * Restarting with stat
+2025-07-28 09:48:32,791 WARNING werkzeug  * Debugger is active!
+2025-07-28 09:48:32,807 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 09:49:25,511 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:49:25] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:49:25,760 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:49:25] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:50:02,352 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:50:02] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-28 09:50:02,375 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:50:02] "[31m[1mPOST /auth/register HTTP/1.1[0m" 400 -
+2025-07-28 09:50:10,321 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:50:10] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-28 09:50:10,427 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:50:10] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-07-28 09:51:07,781 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:51:07] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:51:07,867 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:51:07] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:51:58,269 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:51:58] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 09:51:58,384 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:51:58] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 09:55:26,035 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 09:55:26,035 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 09:55:26,035 INFO werkzeug  * Restarting with stat
+2025-07-28 09:55:27,199 WARNING werkzeug  * Debugger is active!
+2025-07-28 09:55:27,199 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 09:55:40,753 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:55:40] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-07-28 09:55:41,077 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:55:41] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-28 09:55:41,079 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:55:41] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-28 09:55:41,157 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:55:41] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-28 09:56:42,725 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:56:42] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-07-28 09:56:42,758 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:56:42] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-28 09:56:42,771 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:56:42] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-28 09:58:45,864 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:58:45] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-07-28 09:58:45,899 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:58:45] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-28 09:58:45,903 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:58:45] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-28 09:58:45,953 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:58:45] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-07-28 09:58:46,232 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:58:46] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-07-28 09:58:46,257 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:58:46] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-28 09:58:46,260 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:58:46] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-28 09:58:46,285 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:58:46] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-07-28 09:59:03,548 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:59:03] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+2025-07-28 09:59:03,576 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:59:03] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-28 09:59:03,580 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 09:59:03] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-28 10:00:55,831 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 10:00:55,833 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 10:00:55,837 INFO werkzeug  * Restarting with stat
+2025-07-28 10:00:57,197 WARNING werkzeug  * Debugger is active!
+2025-07-28 10:00:57,202 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 10:04:44,641 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 10:04:44,643 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 10:04:44,643 INFO werkzeug  * Restarting with stat
+2025-07-28 10:04:45,777 WARNING werkzeug  * Debugger is active!
+2025-07-28 10:04:45,782 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 10:05:12,249 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:05:12] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 10:05:12,553 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:05:12] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 10:05:20,846 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:05:20] "OPTIONS /auth/users HTTP/1.1" 200 -
+2025-07-28 10:05:20,864 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:05:20] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 10:06:23,285 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 10:06:23,285 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 10:06:41,532 ERROR app Exception on /login [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 19, in login_page
+    return render_template("login.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: login.html
+2025-07-28 10:06:41,539 ERROR root Errore interno del server
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 19, in login_page
+    return render_template("login.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: login.html
+2025-07-28 10:06:41,543 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 10:06:41] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-07-28 10:06:41,619 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 10:06:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 10:09:03,362 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 10:09:03,363 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 10:09:03,366 INFO werkzeug  * Restarting with stat
+2025-07-28 10:09:04,427 WARNING werkzeug  * Debugger is active!
+2025-07-28 10:09:04,427 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 10:09:52,945 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:09:52] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-28 10:09:53,194 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:09:53] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-07-28 10:10:15,589 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:10:15] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 10:10:15,707 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:10:15] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2025-07-28 10:10:33,453 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:10:33] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 10:10:33,537 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:10:33] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2025-07-28 10:10:53,656 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:10:53] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 10:10:53,741 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:10:53] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 10:12:24,385 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:12:24] "OPTIONS /auth/register HTTP/1.1" 200 -
+2025-07-28 10:12:24,484 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:12:24] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-07-28 10:12:53,379 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:12:53] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 10:12:53,471 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:12:53] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 10:23:54,205 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:23:54] "OPTIONS /auth/users HTTP/1.1" 200 -
+2025-07-28 10:23:54,222 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:23:54] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 10:24:15,942 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:24:15] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 10:24:16,043 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:24:16] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2025-07-28 10:24:42,170 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:24:42] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 10:24:42,236 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:24:42] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 10:27:39,818 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 10:27:39,818 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 10:27:39,827 INFO werkzeug  * Restarting with stat
+2025-07-28 10:27:41,078 WARNING werkzeug  * Debugger is active!
+2025-07-28 10:27:41,086 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 10:28:24,825 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:28:24] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 10:28:25,076 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 10:28:25] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 10:35:51,614 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 10:35:51,614 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 10:35:51,614 INFO werkzeug  * Restarting with stat
+2025-07-28 10:35:52,740 WARNING werkzeug  * Debugger is active!
+2025-07-28 10:35:52,756 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 10:37:23,835 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.60.9:5000
+2025-07-28 10:37:23,835 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 10:37:23,840 INFO werkzeug  * Restarting with stat
+2025-07-28 10:37:24,900 WARNING werkzeug  * Debugger is active!
+2025-07-28 10:37:24,900 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 12:12:21,023 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.100.13.16:5000
+2025-07-28 12:12:21,023 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 12:12:21,033 INFO werkzeug  * Restarting with stat
+2025-07-28 12:12:22,669 WARNING werkzeug  * Debugger is active!
+2025-07-28 12:12:22,679 INFO werkzeug  * Debugger PIN: 823-343-002
+2025-07-28 12:12:38,381 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 12:12:38] "OPTIONS /auth/login HTTP/1.1" 200 -
+2025-07-28 12:12:38,644 INFO werkzeug 10.100.60.9 - - [28/Jul/2025 12:12:38] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 12:14:37,789 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 12:14:37,789 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 12:20:04,037 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 12:20:04] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-28 12:20:04,101 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 12:20:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 14:00:50,643 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 14:00:50,645 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 14:04:26,803 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 14:04:26,804 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 14:04:33,213 ERROR app Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 11, in home_page
+    return render_template("home.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+2025-07-28 14:04:33,241 ERROR root Errore interno del server
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 11, in home_page
+    return render_template("home.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+2025-07-28 14:04:33,245 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:04:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-28 14:04:33,464 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:04:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 14:06:29,282 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 14:06:29,282 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 14:06:35,052 ERROR app Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 11, in home_page
+    return render_template("home.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+2025-07-28 14:06:35,078 ERROR root Errore interno del server
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 11, in home_page
+    return render_template("home.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+2025-07-28 14:06:35,097 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:06:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-28 14:06:35,257 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:06:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 14:09:18,769 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 14:09:18,771 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 14:09:22,383 ERROR app Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 11, in home_page
+    return render_template("home_ollama.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home_ollama.html
+2025-07-28 14:09:22,422 ERROR root Errore interno del server
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 11, in home_page
+    return render_template("home_ollama.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home_ollama.html
+2025-07-28 14:09:22,430 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:09:22] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-28 14:09:22,619 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:09:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 14:12:47,833 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 14:12:47,834 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 14:12:52,506 ERROR app Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 11, in home_page
+    return render_template("home_ollama.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home_ollama.html
+2025-07-28 14:12:52,530 ERROR root Errore interno del server
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 11, in home_page
+    return render_template("home_ollama.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home_ollama.html
+2025-07-28 14:12:52,540 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:12:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-28 14:12:52,739 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:12:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-28 14:16:22,898 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 14:16:22,899 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 14:17:07,837 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 14:17:07,838 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 14:18:52,319 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 14:18:52,320 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 14:18:58,359 ERROR app Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 13, in home_page
+    return render_template("home_ollama.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home_ollama.html
+2025-07-28 14:18:58,381 ERROR root Errore interno del server
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 13, in home_page
+    return render_template("home_ollama.html")
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home_ollama.html
+2025-07-28 14:18:58,405 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:18:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-28 14:18:58,578 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 14:18:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
