@@ -1,0 +1,27 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.env
+.env.*
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.swp
+*.bak
+*.tmp
+# Test output
+htmlcov/
+.coverage
+.tox/
+.pytest_cache/
+# Jupyter
+.ipynb_checkpoints/
+# OS
+Thumbs.db
+Desktop.ini
