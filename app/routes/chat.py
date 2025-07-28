@@ -65,14 +65,12 @@ def chat():
     db.session.commit()
     return jsonify({'response': response}), 200
 
-@chat_bp.route('/history', methods=['GET'])
-@jwt_required()
-def history():
+@chat_bp.route('/api/history', methods=['GET'])
+def api_history():
     """
-    Restituisce la cronologia chat dell'utente autenticato.
+    Restituisce la cronologia chat di tutti gli utenti (pubblica, API JSON).
     """
-    user_id = get_jwt_identity()
-    messages = Message.query.filter_by(user_id=user_id).order_by(Message.timestamp.desc()).all()
+    messages = Message.query.order_by(Message.timestamp.desc()).all()
     return jsonify([
         {
             'prompt': m.prompt,

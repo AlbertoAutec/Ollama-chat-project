@@ -114,7 +114,19 @@
     </div>
     <h2>Storico delle Chat</h2>
     <button id="loadHistoryBtn" style="margin-bottom:1em; width:100%; background:var(--button-bg); color:var(--button-text); border:none; border-radius:6px; font-size:1.1em; cursor:pointer;">Carica storico</button>
-    <ul id="historyList"></ul>
+    <div style="overflow-x:auto;">
+      <table id="historyTable" style="width:100%;border-collapse:collapse;margin-top:1em;">
+        <thead>
+          <tr style="background:#f3e97a;">
+            <th style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Data/Ora</th>
+            <th style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Modello</th>
+            <th style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Prompt</th>
+            <th style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Risposta</th>
+          </tr>
+        </thead>
+        <tbody id="historyTableBody"></tbody>
+      </table>
+    </div>
     <div id="historyLoader" style="display:none; text-align:center; margin-top:1em;"><span class="loader"></span></div>
     <div id="historyError" style="display:none; color:#b71c1c; margin-top:1em; text-align:center;"></div>
     <div id="tokenInfo" style="color:#b71c1c; text-align:center; margin-top:1em; font-weight:500;"></div>
@@ -132,43 +144,39 @@
 
     // Caricamento storico
     const loadBtn = document.getElementById('loadHistoryBtn');
-    const historyList = document.getElementById('historyList');
+    const historyTableBody = document.getElementById('historyTableBody');
     const loader = document.getElementById('historyLoader');
     const errorDiv = document.getElementById('historyError');
-    // Redirect automatico a /login se manca il token JWT
-    const token = localStorage.getItem('jwt');
-    if (!token) {
-      window.location.href = '/login';
-    }
     loadBtn.onclick = async function() {
-      historyList.innerHTML = '';
+      historyTableBody.innerHTML = '';
       errorDiv.style.display = 'none';
       loader.style.display = 'block';
       const infoBox = document.getElementById('tokenInfo');
-      // token già controllato sopra
       infoBox.textContent = '';
       try {
-        const res = await fetch('/history', {
+        const res = await fetch('/api/history', {
           method: 'GET',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + token
+            'Content-Type': 'application/json'
           }
         });
         const data = await res.json();
         loader.style.display = 'none';
         if (res.status === 200 && Array.isArray(data)) {
           if (data.length === 0) {
-            historyList.innerHTML = '<li>Nessuna chat trovata.</li>';
+            historyTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">Nessuna chat trovata.</td></tr>';
           } else {
             data.forEach(item => {
-              const li = document.createElement('li');
-              li.textContent = `[${item.timestamp || ''}] ${item.model || ''}: ${item.prompt} → ${item.response}`;
-              historyList.appendChild(li);
+              const tr = document.createElement('tr');
+              tr.innerHTML = `
+                <td style="padding:0.5em 0.4em;border-bottom:1px solid #eee;white-space:nowrap;">${item.timestamp ? new Date(item.timestamp).toLocaleString('it-IT') : ''}</td>
+                <td style="padding:0.5em 0.4em;border-bottom:1px solid #eee;">${item.model || ''}</td>
+                <td style="padding:0.5em 0.4em;border-bottom:1px solid #eee;">${item.prompt || ''}</td>
+                <td style="padding:0.5em 0.4em;border-bottom:1px solid #eee;">${item.response || ''}</td>
+              `;
+              historyTableBody.appendChild(tr);
             });
           }
-        } else if (res.status === 401) {
-          infoBox.textContent = 'Token scaduto o non valido. Effettua di nuovo il login.';
         } else {
           errorDiv.textContent = 'Errore nel caricamento dello storico.';
           errorDiv.style.display = 'block';

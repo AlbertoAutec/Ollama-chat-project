@@ -31,3 +31,59 @@
 2025-07-28 15:59:42,348 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 15:59:42] "GET /chat HTTP/1.1" 200 -
 2025-07-28 15:59:42,381 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 15:59:42] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
 2025-07-28 16:00:20,329 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:00:20] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 16:05:54,678 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 16:05:54,679 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 16:05:58,118 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:05:58] "GET / HTTP/1.1" 200 -
+2025-07-28 16:05:58,397 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:05:58] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:05:59,229 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:05:59] "GET /login HTTP/1.1" 200 -
+2025-07-28 16:05:59,266 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:05:59] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:06:00,711 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:06:00] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 16:06:05,357 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:06:05] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 16:06:09,151 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:06:09] "GET /chat HTTP/1.1" 200 -
+2025-07-28 16:06:09,176 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:06:09] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:06:18,875 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:06:18] "[31m[1mGET /history HTTP/1.1[0m" 401 -
+2025-07-28 16:07:42,019 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 16:07:42,020 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 16:07:44,793 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:07:44] "GET / HTTP/1.1" 200 -
+2025-07-28 16:07:45,090 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:07:45] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:07:46,412 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:07:46] "GET /login HTTP/1.1" 200 -
+2025-07-28 16:07:46,432 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:07:46] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:07:47,657 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:07:47] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 16:08:03,652 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:08:03] "GET /chat HTTP/1.1" 200 -
+2025-07-28 16:08:03,680 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:08:03] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:08:09,387 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:08:09] "GET /history HTTP/1.1" 200 -
+2025-07-28 16:08:34,429 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:08:34] "GET /auth/users HTTP/1.1" 200 -
+2025-07-28 16:09:57,183 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 16:09:57,184 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 16:09:58,514 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:09:58] "GET /history HTTP/1.1" 200 -
+2025-07-28 16:11:35,681 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 16:11:35,681 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 16:11:38,038 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:11:38] "GET / HTTP/1.1" 200 -
+2025-07-28 16:11:38,270 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:11:38] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:11:39,587 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:11:39] "GET /login HTTP/1.1" 200 -
+2025-07-28 16:11:39,618 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:11:39] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:11:40,996 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:11:40] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 16:11:44,271 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:11:44] "GET /chat HTTP/1.1" 200 -
+2025-07-28 16:11:44,294 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:11:44] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:11:51,194 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:11:51] "GET /history HTTP/1.1" 200 -
+2025-07-28 16:12:07,558 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:12:07] "GET /history HTTP/1.1" 200 -
+2025-07-28 16:12:08,108 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:12:08] "GET /history HTTP/1.1" 200 -
+2025-07-28 16:12:08,396 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:12:08] "GET /history HTTP/1.1" 200 -
+2025-07-28 16:12:08,578 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:12:08] "GET /history HTTP/1.1" 200 -
+2025-07-28 16:13:41,367 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-28 16:13:41,370 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-28 16:13:43,952 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:43] "GET / HTTP/1.1" 200 -
+2025-07-28 16:13:44,153 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:44] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:13:45,181 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:45] "GET /login HTTP/1.1" 200 -
+2025-07-28 16:13:45,212 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:45] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:13:46,546 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:46] "POST /auth/login HTTP/1.1" 200 -
+2025-07-28 16:13:51,968 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:51] "GET /chat HTTP/1.1" 200 -
+2025-07-28 16:13:51,991 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:51] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:13:55,821 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:55] "GET /history HTTP/1.1" 200 -
+2025-07-28 16:13:55,843 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:55] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-28 16:13:58,890 INFO werkzeug 127.0.0.1 - - [28/Jul/2025 16:13:58] "GET /api/history HTTP/1.1" 200 -
