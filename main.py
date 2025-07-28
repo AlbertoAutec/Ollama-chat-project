@@ -25,4 +25,3 @@ def login_page():
 @app.route("/history")
 def history_page():
     return render_template("history.html")
-

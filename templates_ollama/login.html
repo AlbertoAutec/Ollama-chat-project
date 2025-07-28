@@ -176,10 +176,6 @@ body.dark {
     <a href="/register" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
       <button type="button" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Non hai un account? Registrati</button>
     </a>
-    <a href="/history" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
-      <button type="button" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Vai allo storico chat</button>
-    </a>
-    <div id="tokens"></div>
   </div>
   <script>
     // Tema chiaro/scuro
@@ -213,7 +209,7 @@ body.dark {
       let ok = false;
       let tokensHtml = '';
       try {
-        const res = await fetch('http://10.100.60.9:5000/auth/login', {
+        const res = await fetch('/auth/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username, password })

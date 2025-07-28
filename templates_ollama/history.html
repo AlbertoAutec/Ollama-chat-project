@@ -117,6 +117,7 @@
     <ul id="historyList"></ul>
     <div id="historyLoader" style="display:none; text-align:center; margin-top:1em;"><span class="loader"></span></div>
     <div id="historyError" style="display:none; color:#b71c1c; margin-top:1em; text-align:center;"></div>
+    <div id="tokenInfo" style="color:#b71c1c; text-align:center; margin-top:1em; font-weight:500;"></div>
   </div>
   <script>
     // Tema chiaro/scuro
@@ -134,17 +135,24 @@
     const historyList = document.getElementById('historyList');
     const loader = document.getElementById('historyLoader');
     const errorDiv = document.getElementById('historyError');
+    // Redirect automatico a /login se manca il token JWT
+    const token = localStorage.getItem('jwt');
+    if (!token) {
+      window.location.href = '/login';
+    }
     loadBtn.onclick = async function() {
       historyList.innerHTML = '';
       errorDiv.style.display = 'none';
       loader.style.display = 'block';
+      const infoBox = document.getElementById('tokenInfo');
+      // token già controllato sopra
+      infoBox.textContent = '';
       try {
-        const token = localStorage.getItem('jwt');
-        const res = await fetch('http://10.100.60.9:5000/history', {
+        const res = await fetch('/history', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': token ? 'Bearer ' + token : ''
+            'Authorization': 'Bearer ' + token
           }
         });
         const data = await res.json();
@@ -159,6 +167,8 @@
               historyList.appendChild(li);
             });
           }
+        } else if (res.status === 401) {
+          infoBox.textContent = 'Token scaduto o non valido. Effettua di nuovo il login.';
         } else {
           errorDiv.textContent = 'Errore nel caricamento dello storico.';
           errorDiv.style.display = 'block';

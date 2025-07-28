@@ -231,7 +231,7 @@ body.dark {
       usersToggleBtn.disabled = true;
       usersToggleBtn.textContent = 'Caricamento...';
       try {
-        const res = await fetch('http://10.100.60.9:5000/auth/users', {
+        const res = await fetch('/auth/users', {
           method: 'GET',
           headers: { 'Authorization': 'Bearer ' + token }
         });
@@ -265,7 +265,7 @@ body.dark {
       let msg = '';
       let ok = false;
       try {
-        const res = await fetch('http://10.100.60.9:5000/chat', {
+        const res = await fetch('/chat', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -303,7 +303,7 @@ body.dark {
       btn.disabled = true;
       btn.innerHTML = 'Attendi <span class="loader"></span>';
       try {
-        const res = await fetch('http://10.100.60.9:5000/auth/refresh', {
+        const res = await fetch('/auth/refresh', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
