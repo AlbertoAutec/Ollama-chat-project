@@ -5,3 +5,4 @@ PyJWT
 werkzeug
 python-dotenv
 requests
+flask_jwt_extended
