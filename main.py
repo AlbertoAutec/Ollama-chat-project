@@ -8,9 +8,7 @@ app = create_app()
 # Route home page
 @app.route("/")
 def home_page():
-    import os
-    print(os.listdir(os.path.join(os.path.dirname(__file__), 'templates')))
-    return render_template("home_ollama.html")
+    return render_template("home_ollama2.html")
 
 @app.route("/chat")
 def chat_page():

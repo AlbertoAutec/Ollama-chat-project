@@ -20,7 +20,10 @@ def create_app():
     """
     Crea e configura l'app Flask.
     """
-    app = Flask(__name__)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    template_dir = os.path.join(base_dir, "templates_ollama")
+    static_dir = os.path.join(base_dir, "static_ollama")
+    app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
     # Swagger/OpenAPI (Flasgger)
     from flasgger import Swagger
     Swagger(app)
