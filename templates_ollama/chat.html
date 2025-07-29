@@ -701,7 +701,10 @@
     });
 
     // Logout
-    document.getElementById('logoutBtn').onclick = function() {
+    document.getElementById('logoutBtn').onclick = async function() {
+      try {
+        await fetch('/logout', { method: 'GET', credentials: 'same-origin' });
+      } catch (e) { /* ignora errori logout server */ }
       localStorage.removeItem('jwt');
       window.location.href = '/login';
     };
