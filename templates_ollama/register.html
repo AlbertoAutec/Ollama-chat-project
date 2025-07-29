@@ -57,12 +57,12 @@ body.dark {
       line-height: 1.125em;
       background: var(--main-bg);
       color: var(--text-main);
-      position: relative;
       min-height: 100vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      margin: 0;
       transition: background 0.2s;
+      position: relative;
       z-index: 1;
     }
     body::before {
@@ -199,24 +199,26 @@ body.dark {
   </style>
 </head>
 <body>
-  <button class="theme-toggle" id="themeToggle" title="Cambia tema">🌙</button>
-  <button class="lang-toggle" id="langToggle" title="Cambia lingua">🇮🇹</button>
-  <div class="card">
-    <div style="text-align:center; margin-bottom:1em;">
-      <img src="/static_ollama/img_ollama/logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
+  <main style="flex:1;display:flex;align-items:center;justify-content:center;padding:0;min-height:0;">
+    <button class="theme-toggle" id="themeToggle" title="Cambia tema">🌙</button>
+    <button class="lang-toggle" id="langToggle" title="Cambia lingua">🇮🇹</button>
+    <div class="card">
+      <div style="text-align:center; margin-bottom:1em;">
+        <img src="/static_ollama/img_ollama/logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
+      </div>
+      <h2 id="registerTitle">Registrazione utente di Autecsafety</h2>
+      <form id="regForm" autocomplete="off">
+        <input type="text" id="username" required autocomplete="username" placeholder="Username">
+        <input type="email" id="email" required autocomplete="email" placeholder="Email">
+        <input type="password" id="password" required autocomplete="new-password" placeholder="Password">
+        <button type="submit" id="registerBtn">Registrati</button>
+      </form>
+      <div id="result"><p></p></div>
+      <a href="/login" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
+        <button type="button" id="loginBtn" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Hai già un account? Accedi</button>
+      </a>
     </div>
-    <h2 id="registerTitle">Registrazione utente di Autecsafety</h2>
-    <form id="regForm" autocomplete="off">
-      <input type="text" id="username" required autocomplete="username" placeholder="Username">
-      <input type="email" id="email" required autocomplete="email" placeholder="Email">
-      <input type="password" id="password" required autocomplete="new-password" placeholder="Password">
-      <button type="submit" id="registerBtn">Registrati</button>
-    </form>
-    <div id="result"><p></p></div>
-    <a href="/login" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
-      <button type="button" id="loginBtn" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Hai già un account? Accedi</button>
-    </a>
-  </div>
+  </main>
   <script>
 
      // Tema chiaro/scuro
@@ -326,6 +328,12 @@ body.dark {
       regBtn.innerHTML = 'Registra';
     };
   </script>
+
+<footer style="background:#333;color:#fff;padding:20px 0;text-align:center;">
+  <div class="container-fluid footer__container--dnd">
+    <p style="margin:0;font-size:1em;">Footer di test: questa è una informazione di esempio.</p>
+  </div>
+</footer>
 </body>
 
 
