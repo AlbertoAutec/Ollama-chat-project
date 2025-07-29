@@ -301,3 +301,70 @@ RuntimeError: The session is unavailable because no secret key was set.  Set the
 2025-07-29 11:48:50,770 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:48:50] "GET / HTTP/1.1" 200 -
 2025-07-29 11:48:51,045 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:48:51] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
 2025-07-29 11:48:51,056 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:48:51] "[36mGET /static_ollama/img_ollama/background/slide.webp HTTP/1.1[0m" 304 -
+2025-07-29 11:52:36,431 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-29 11:52:36,432 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-29 11:52:41,146 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:52:41] "GET / HTTP/1.1" 200 -
+2025-07-29 11:52:41,412 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:52:41] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-29 11:52:41,426 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:52:41] "[36mGET /static_ollama/img_ollama/background/slide.webp HTTP/1.1[0m" 304 -
+2025-07-29 11:52:44,118 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:52:44] "GET /register HTTP/1.1" 200 -
+2025-07-29 11:52:44,161 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:52:44] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-29 11:52:44,168 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:52:44] "[36mGET /static_ollama/img_ollama/background/slide.webp HTTP/1.1[0m" 304 -
+2025-07-29 11:53:07,076 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:53:07] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-07-29 11:53:31,372 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:53:31] "POST /auth/login HTTP/1.1" 200 -
+2025-07-29 11:53:31,405 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:53:31] "GET /chat HTTP/1.1" 200 -
+2025-07-29 11:53:31,438 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:53:31] "[36mGET /static_ollama/img_ollama/background/slide.webp HTTP/1.1[0m" 304 -
+2025-07-29 11:53:31,471 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 11:53:31] "GET /api/history HTTP/1.1" 200 -
+2025-07-29 12:00:45,652 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-29 12:00:45,662 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-07-29 12:00:49,235 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:00:49] "GET / HTTP/1.1" 200 -
+2025-07-29 12:00:49,689 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:00:49] "[36mGET /static_ollama/img_ollama/background/slide.webp HTTP/1.1[0m" 304 -
+2025-07-29 12:00:49,769 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:00:49] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-29 12:00:49,802 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:00:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-29 12:00:52,931 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:00:52] "POST /auth/login HTTP/1.1" 200 -
+2025-07-29 12:00:52,957 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:00:52] "GET /chat HTTP/1.1" 200 -
+2025-07-29 12:00:52,996 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:00:52] "[36mGET /static_ollama/img_ollama/background/slide.webp HTTP/1.1[0m" 304 -
+2025-07-29 12:00:53,030 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:00:53] "GET /api/history HTTP/1.1" 200 -
+2025-07-29 12:01:19,494 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:01:19] "POST /chat HTTP/1.1" 200 -
+2025-07-29 12:01:24,745 ERROR app Exception on /logout [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 13, in logout
+    session.clear()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\sessions.py", line 104, in _fail
+    raise RuntimeError(
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-07-29 12:01:24,745 ERROR root Errore interno del server
+Traceback (most recent call last):
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\main.py", line 13, in logout
+    session.clear()
+  File "C:\Users\Alberto.Mingardi\OneDrive - AUTEC Srl\Desktop\Ollama-chat\venv\lib\site-packages\flask\sessions.py", line 104, in _fail
+    raise RuntimeError(
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-07-29 12:01:24,753 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:01:24] "[35m[1mGET /logout HTTP/1.1[0m" 500 -
+2025-07-29 12:01:24,773 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:01:24] "GET /login HTTP/1.1" 200 -
+2025-07-29 12:01:24,806 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:01:24] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-29 12:01:24,813 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:01:24] "[36mGET /static_ollama/img_ollama/background/slide.webp HTTP/1.1[0m" 304 -
+2025-07-29 12:01:27,564 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:01:27] "GET /register HTTP/1.1" 200 -
+2025-07-29 12:01:27,597 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:01:27] "[36mGET /static_ollama/img_ollama/logo-banner-280x60.png HTTP/1.1[0m" 304 -
+2025-07-29 12:01:27,611 INFO werkzeug 127.0.0.1 - - [29/Jul/2025 12:01:27] "[36mGET /static_ollama/img_ollama/background/slide.webp HTTP/1.1[0m" 304 -
