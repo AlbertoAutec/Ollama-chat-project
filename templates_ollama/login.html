@@ -192,10 +192,10 @@ body.dark {
     <div style="text-align:center; margin-bottom:1em;">
       <img src="/static_ollama/img_ollama/logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
     </div>
-    <h2>Login utente di Autecsafety</h2>
+    <h2>Login</h2>
     <form id="loginForm" autocomplete="off">
-      <label>Il tuo Username:<input type="text" id="username" required autocomplete="username"></label>
-      <label>La tua Password:<input type="password" id="password" required autocomplete="current-password"></label>
+      <input type="text" id="username" required autocomplete="username" placeholder="Username">
+      <input type="password" id="password" required autocomplete="current-password" placeholder="Password">
       <button type="submit" id="loginBtn">Entra</button>
     </form>
     <div id="result"></div>
