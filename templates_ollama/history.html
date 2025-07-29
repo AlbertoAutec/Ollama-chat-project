@@ -129,20 +129,21 @@
 </head>
 <body>
   <button class="theme-toggle" id="themeToggle" title="Cambia tema">🌙</button>
+  <button class="lang-toggle" id="langToggle" title="Cambia lingua">🇮🇹</button>
   <div class="card">
     <div style="text-align:center; margin-bottom:1em;">
       <img src="/static_ollama/img_ollama/logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
     </div>
-    <h2>Storico delle Chat</h2>
+    <h2 id="historyTitle">Storico delle Chat</h2>
     <button id="loadHistoryBtn" style="margin-bottom:1em; width:100%; background:var(--button-bg); color:var(--button-text); border:none; border-radius:6px; font-size:1.1em; cursor:pointer;">Carica storico</button>
     <div style="overflow-x:auto;">
       <table id="historyTable" style="width:100%;border-collapse:collapse;margin-top:1em;">
         <thead>
           <tr style="background:#f3e97a;">
-            <th style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Data/Ora</th>
-            <th style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Modello</th>
-            <th style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Prompt</th>
-            <th style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Risposta</th>
+            <th id="thDate" style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Data/Ora</th>
+            <th id="thModel" style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Modello</th>
+            <th id="thPrompt" style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Prompt</th>
+            <th id="thResponse" style="padding:0.7em 0.5em;border-bottom:2px solid #ffd600;">Risposta</th>
           </tr>
         </thead>
         <tbody id="historyTableBody"></tbody>
@@ -153,6 +154,45 @@
     <div id="tokenInfo" style="color:#b71c1c; text-align:center; margin-top:1em; font-weight:500;"></div>
   </div>
   <script>
+    // --- CAMBIO LINGUA ---
+    const translations = {
+      it: {
+        history_title: "Storico delle Chat",
+        load_btn: "Carica storico",
+        th_date: "Data/Ora",
+        th_model: "Modello",
+        th_prompt: "Prompt",
+        th_response: "Risposta",
+        no_chats: "Nessuna chat trovata.",
+        error: "Errore nel caricamento dello storico."
+      },
+      en: {
+        history_title: "Chat History",
+        load_btn: "Load history",
+        th_date: "Date/Time",
+        th_model: "Model",
+        th_prompt: "Prompt",
+        th_response: "Response",
+        no_chats: "No chats found.",
+        error: "Error loading history."
+      }
+    };
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      document.getElementById('historyTitle').textContent = translations[lang].history_title;
+      document.getElementById('loadHistoryBtn').textContent = translations[lang].load_btn;
+      document.getElementById('thDate').textContent = translations[lang].th_date;
+      document.getElementById('thModel').textContent = translations[lang].th_model;
+      document.getElementById('thPrompt').textContent = translations[lang].th_prompt;
+      document.getElementById('thResponse').textContent = translations[lang].th_response;
+      document.getElementById('langToggle').textContent = lang === 'it' ? '🇮🇹' : '🇬🇧';
+    }
+    const langToggle = document.getElementById('langToggle');
+    langToggle.onclick = () => {
+      const current = localStorage.getItem('lang') || 'it';
+      setLanguage(current === 'it' ? 'en' : 'it');
+    };
+    setLanguage(localStorage.getItem('lang') || 'it');
     // Tema chiaro/scuro
     const themeToggle = document.getElementById('themeToggle');
     function setTheme(dark) {
@@ -174,6 +214,7 @@
       loader.style.display = 'block';
       const infoBox = document.getElementById('tokenInfo');
       infoBox.textContent = '';
+      const lang = localStorage.getItem('lang') || 'it';
       try {
         const res = await fetch('/api/history', {
           method: 'GET',
@@ -185,12 +226,12 @@
         loader.style.display = 'none';
         if (res.status === 200 && Array.isArray(data)) {
           if (data.length === 0) {
-            historyTableBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">Nessuna chat trovata.</td></tr>';
+            historyTableBody.innerHTML = `<tr><td colspan="4" style="text-align:center;">${translations[lang].no_chats}</td></tr>`;
           } else {
             data.forEach(item => {
               const tr = document.createElement('tr');
               tr.innerHTML = `
-                <td style="padding:0.5em 0.4em;border-bottom:1px solid #eee;white-space:nowrap;">${item.timestamp ? new Date(item.timestamp).toLocaleString('it-IT') : ''}</td>
+                <td style="padding:0.5em 0.4em;border-bottom:1px solid #eee;white-space:nowrap;">${item.timestamp ? new Date(item.timestamp).toLocaleString(lang === 'it' ? 'it-IT' : 'en-GB') : ''}</td>
                 <td style="padding:0.5em 0.4em;border-bottom:1px solid #eee;">${item.model || ''}</td>
                 <td style="padding:0.5em 0.4em;border-bottom:1px solid #eee;">${item.prompt || ''}</td>
                 <td style="padding:0.5em 0.4em;border-bottom:1px solid #eee;">${item.response || ''}</td>
@@ -199,7 +240,7 @@
             });
           }
         } else {
-          errorDiv.textContent = 'Errore nel caricamento dello storico.';
+          errorDiv.textContent = translations[lang].error;
           errorDiv.style.display = 'block';
         }
       } catch (err) {

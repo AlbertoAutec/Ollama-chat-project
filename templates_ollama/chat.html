@@ -472,7 +472,7 @@
 <body>
   <div class="sidebar">
     <div class="sidebar-header">
-      <span class="sidebar-title">Conversazioni</span>
+      <span class="sidebar-title" id="sidebarTitle">Conversazioni</span>
     </div>
     <div class="conversations" id="conversationsList">
       <!-- Conversazioni caricate via JS -->
@@ -487,6 +487,7 @@
       <div class="icons">
         <button class="new-chat-btn" id="newChatBtnHeader" title="Nuova conversazione">+ Nuova</button>
         <button class="icon-btn theme-toggle" id="themeToggle" title="Cambia tema">🌙</button>
+        <button class="icon-btn" id="langToggle" title="Cambia lingua">🇮🇹</button>
         <button class="icon-btn" id="settingsBtn" title="Impostazioni">⚙️</button>
         <button class="icon-btn" id="logoutBtn" title="Logout">🔒</button>
       </div>
@@ -498,11 +499,46 @@
     </div>
     <form class="input-area" id="chatForm" autocomplete="off">
       <textarea id="chatInput" rows="1" placeholder="Scrivi qualcosa…" required></textarea>
-      <button type="submit" class="send-btn" title="Invia"><span style="display:inline-block;transform:rotate(45deg);">✈️</span></button>
+      <button type="submit" class="send-btn" id="sendBtn" title="Invia"><span style="display:inline-block;transform:rotate(45deg);">✈️</span></button>
       <button type="button" class="mic-btn" title="Input vocale" disabled>🎤</button>
     </form>
   </div>
   <script>
+    // --- CAMBIO LINGUA ---
+    const translations = {
+      it: {
+        sidebar_title: "Conversazioni",
+        new_chat: "+ Nuova",
+        send_btn: "✈️",
+        input_placeholder: "Scrivi qualcosa…",
+        settings: "Impostazioni (prossimamente)",
+        logout: "Logout",
+        ai_typing: "Nova AI sta scrivendo"
+      },
+      en: {
+        sidebar_title: "Conversations",
+        new_chat: "+ New",
+        send_btn: "✈️",
+        input_placeholder: "Type something…",
+        settings: "Settings (coming soon)",
+        logout: "Logout",
+        ai_typing: "Nova AI is typing"
+      }
+    };
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      document.getElementById('sidebarTitle').textContent = translations[lang].sidebar_title;
+      document.getElementById('newChatBtnHeader').textContent = translations[lang].new_chat;
+      document.getElementById('chatInput').placeholder = translations[lang].input_placeholder;
+      document.getElementById('sendBtn').innerHTML = '<span style="display:inline-block;transform:rotate(45deg);">' + translations[lang].send_btn + '</span>';
+      document.getElementById('langToggle').textContent = lang === 'it' ? '🇮🇹' : '🇬🇧';
+    }
+    const langToggle = document.getElementById('langToggle');
+    langToggle.onclick = () => {
+      const current = localStorage.getItem('lang') || 'it';
+      setLanguage(current === 'it' ? 'en' : 'it');
+    };
+    setLanguage(localStorage.getItem('lang') || 'it');
     // --- UTENTE LOGGATO: nome e iniziali dinamiche ---
     function getUserFromJWT() {
       const token = localStorage.getItem('jwt');

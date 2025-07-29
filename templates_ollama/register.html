@@ -4,6 +4,29 @@
   <meta charset="UTF-8">
   <title>Registrazione API Chat di Autecsafety</title>
   <style>
+    .lang-toggle {
+      position: absolute;
+      top: 18px;
+      right: 75px;
+      z-index: 10;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.3em;
+      cursor: pointer;
+      box-shadow: 0 1px 4px #0002;
+      transition: background 0.2s, color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .lang-toggle:hover {
+      background: var(--button-bg-hover);
+    }
     :root {
       --main-bg: #f4f6fb;
       --card-bg: #fff;
@@ -177,32 +200,72 @@ body.dark {
 </head>
 <body>
   <button class="theme-toggle" id="themeToggle" title="Cambia tema">🌙</button>
+  <button class="lang-toggle" id="langToggle" title="Cambia lingua">🇮🇹</button>
   <div class="card">
     <div style="text-align:center; margin-bottom:1em;">
       <img src="/static_ollama/img_ollama/logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
     </div>
-    <h2>Registrati per accedere alla chat API di Autecsafety</h2>
+    <h2 id="registerTitle">Registrazione utente di Autecsafety</h2>
     <form id="regForm" autocomplete="off">
       <input type="text" id="username" required autocomplete="username" placeholder="Username">
       <input type="email" id="email" required autocomplete="email" placeholder="Email">
       <input type="password" id="password" required autocomplete="new-password" placeholder="Password">
-      <button type="submit" id="regBtn">Registrati qui</button>
+      <button type="submit" id="registerBtn">Registrati</button>
     </form>
-    <div id="result">
-      <p></p>
-    </div>
+    <div id="result"><p></p></div>
+    <a href="/login" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
+      <button type="button" id="loginBtn" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Hai già un account? Accedi</button>
+    </a>
   <script>
-    // Tema chiaro/scuro
+
+     // Tema chiaro/scuro
     const themeToggle = document.getElementById('themeToggle');
     function setTheme(dark) {
       document.body.classList.toggle('dark', dark);
       themeToggle.textContent = dark ? '☀️' : '🌙';
       localStorage.setItem('theme', dark ? 'dark' : 'light');
     }
-    // Removed date display functionality
+       // Removed date display functionality
     themeToggle.onclick = () => setTheme(!document.body.classList.contains('dark'));
     // Applica preferenza salvata
     if (localStorage.getItem('theme') === 'dark') setTheme(true);
+    // --- CAMBIO LINGUA ---
+    const translations = {
+      it: {
+        register_title: "Registrazione utente di Autecsafety",
+        username: "Username",
+        password: "Password",
+        email: "Email",
+        register_btn: "Registrati",
+        login_link: "Hai già un account? Accedi"
+      },
+      en: {
+        register_title: "Autecsafety User Registration",
+        username: "Username",
+        password: "Password",
+        email: "Email",
+        register_btn: "Register",
+        login_link: "Already have an account? Login"
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      document.getElementById('registerTitle').textContent = translations[lang].register_title;
+      document.getElementById('username').placeholder = translations[lang].username;
+      document.getElementById('password').placeholder = translations[lang].password;
+      document.getElementById('email').placeholder = translations[lang].email;
+      document.getElementById('registerBtn').textContent = translations[lang].register_btn;
+      document.getElementById('loginBtn').textContent = translations[lang].login_link;
+      document.getElementById('langToggle').textContent = lang === 'it' ? '🇮🇹' : '🇬🇧';
+    }
+    const langToggle = document.getElementById('langToggle');
+    langToggle.onclick = () => {
+      const current = localStorage.getItem('lang') || 'it';
+      setLanguage(current === 'it' ? 'en' : 'it');
+    };
+    setLanguage(localStorage.getItem('lang') || 'it');
+
     const regForm = document.getElementById('regForm');
     const regBtn = document.getElementById('regBtn');
     regForm.onsubmit = async function(e) {

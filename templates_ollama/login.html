@@ -184,15 +184,39 @@ body.dark {
     .theme-toggle:hover {
       background: var(--button-bg-hover);
     }
+    .lang-toggle {
+      position: absolute;
+      top: 18px;
+      right: 75px;
+      z-index: 10;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      font-size: 1.3em;
+      cursor: pointer;
+      box-shadow: 0 1px 4px #0002;
+      transition: background 0.2s, color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .lang-toggle:hover {
+      background: var(--button-bg-hover);
+    }
   </style>
 </head>
 <body>
   <button class="theme-toggle" id="themeToggle" title="Cambia tema">🌙</button>
+  <button class="lang-toggle" id="langToggle" title="Cambia lingua">🇮🇹</button>
   <div class="card">
     <div style="text-align:center; margin-bottom:1em;">
       <img src="/static_ollama/img_ollama/logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
     </div>
-    <h2>Login</h2>
+    <h2 id="loginTitle">Login</h2>
     <form id="loginForm" autocomplete="off">
       <input type="text" id="username" required autocomplete="username" placeholder="Username">
       <input type="password" id="password" required autocomplete="current-password" placeholder="Password">
@@ -200,7 +224,7 @@ body.dark {
     </form>
     <div id="result"></div>
     <a href="/register" style="display:block;text-align:center;margin-top:1.2em;text-decoration:none;">
-      <button type="button" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Non hai un account? Registrati</button>
+      <button type="button" id="registerBtn" style="background:#e0e0e0;color:#222;width:100%;border:none;border-radius:6px;padding:0.7em 1.5em;font-size:1.05em;cursor:pointer;transition:background 0.2s;">Non hai un account? Registrati</button>
     </a>
   </div>
   <script>
@@ -218,6 +242,42 @@ body.dark {
       navigator.clipboard.writeText(text);
       alert('Copiato negli appunti!');
     }
+
+    // --- CAMBIO LINGUA ---
+    const translations = {
+      it: {
+        login_title: "Login utente di Autecsafety",
+        username: "Username",
+        password: "Password",
+        login_btn: "Entra",
+        register_link: "Non hai un account? Registrati"
+      },
+      en: {
+        login_title: "Autecsafety User Login",
+        username: "Username",
+        password: "Password",
+        login_btn: "Sign in",
+        register_link: "Don't have an account? Register"
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      document.getElementById('loginTitle').textContent = translations[lang].login_title;
+      document.getElementById('username').placeholder = translations[lang].username;
+      document.getElementById('password').placeholder = translations[lang].password;
+      document.getElementById('loginBtn').textContent = translations[lang].login_btn;
+      document.getElementById('registerBtn').textContent = translations[lang].register_link;
+      // Update flag icon
+      document.getElementById('langToggle').textContent = lang === 'it' ? '🇮🇹' : '🇬🇧';
+    }
+    const langToggle = document.getElementById('langToggle');
+    langToggle.onclick = () => {
+      const current = localStorage.getItem('lang') || 'it';
+      setLanguage(current === 'it' ? 'en' : 'it');
+    };
+    setLanguage(localStorage.getItem('lang') || 'it');
+
     const loginForm = document.getElementById('loginForm');
     const loginBtn = document.getElementById('loginBtn');
     loginForm.onsubmit = async function(e) {
