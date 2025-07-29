@@ -8,7 +8,7 @@ app = create_app()
 # Route home page
 @app.route("/")
 def home_page():
-    return render_template("home_ollama2.html")
+    return render_template("login.html")
 
 @app.route("/chat")
 def chat_page():
