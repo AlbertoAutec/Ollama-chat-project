@@ -27,8 +27,13 @@ body.dark {
   --button-text: #23272e;
 }
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1.125em;
       background: var(--main-bg);
+      color: var(--text-main);
       position: relative;
       min-height: 100vh;
       display: flex;
@@ -42,7 +47,7 @@ body.dark {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       z-index: 0;
-      background: url('/static_ollama/img_ollama/background/slide_mobile.webp') no-repeat center center fixed;
+      background: url('/static_ollama/img_ollama/background/slide.webp') no-repeat center center fixed;
       background-size: cover;
       opacity: 0.32;
       pointer-events: none;
@@ -62,7 +67,13 @@ body.dark {
       color: var(--text-main);
       transition: background 0.2s, color 0.2s;
     }
-    h2 { text-align: center; color: var(--text-main); }
+    h2 {
+      text-align: center;
+      color: var(--text-main);
+      font-size: 1.25em;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
     label { display: block; margin-top: 1.2em; color: var(--text-main); }
     input {
       width: 100%;
@@ -170,7 +181,7 @@ body.dark {
     <div style="text-align:center; margin-bottom:1em;">
       <img src="/static_ollama/img_ollama/logo-banner-280x60.png" alt="Logo Autecsafety" style="height:32px; max-width:90%; object-fit:contain;">
     </div>
-    <h2>La tua prima registrazione alla chat API di Autecsafety</h2>
+    <h2>Registrati per accedere alla chat API di Autecsafety</h2>
     <form id="regForm" autocomplete="off">
       <label>Inserisci Username:<input type="text" id="username" required autocomplete="username"></label>
       <label>Inserisci Email:<input type="email" id="email" required autocomplete="email"></label>
