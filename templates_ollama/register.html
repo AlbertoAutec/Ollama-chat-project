@@ -29,12 +29,27 @@ body.dark {
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       background: var(--main-bg);
-      position: relative; /* Added to position the date display */
+      position: relative;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: background 0.2s;
+      z-index: 1;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+      background: url('/static_ollama/img_ollama/background/slide_mobile.webp') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.32;
+      pointer-events: none;
+    }
+    .card, .theme-toggle, #result, #tokens, form, a, h2 {
+      position: relative;
+      z-index: 1;
     }
   /* Removed date display styles */
     .card {
@@ -51,6 +66,10 @@ body.dark {
     label { display: block; margin-top: 1.2em; color: var(--text-main); }
     input {
       width: 100%;
+      box-sizing: border-box;
+      margin-left: 0;
+      margin-right: 0;
+      display: block;
       padding: 0.7em;
       border: 1px solid var(--input-border);
       border-radius: 6px;
